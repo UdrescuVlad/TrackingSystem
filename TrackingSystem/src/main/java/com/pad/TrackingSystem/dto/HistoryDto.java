@@ -1,69 +1,42 @@
-package com.pad.TrackingSystem.model;
+package com.pad.TrackingSystem.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.pad.TrackingSystem.model.Customer;
 
-import javax.persistence.*;
-@Entity
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Customer {
+public class HistoryDto {
+    private HistoryDto() {}
 
-    public Customer() {}
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
     private String phone;
     private String typeCar;
     private String destination;
 
-    public Customer(Builder builder) {
-        setName(builder.name);
-        setPhone(builder.phone);
-        setTypeCar(builder.typeCar);
-        setDestination(builder.destination);
-        setId(builder.id);
+    public HistoryDto(Builder builder) {
+        id = builder.id;
+        name = builder.name;
+        phone = builder.phone;
+        typeCar = builder.typeCar;
+        destination = builder.destination;
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getTypeCar() {
         return typeCar;
     }
 
-    public void setTypeCar(String typeCar) {
-        this.typeCar = typeCar;
-    }
-
     public String getDestination() {
         return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
     }
 
     public static final class Builder {
@@ -74,7 +47,7 @@ public class Customer {
         String typeCar;
         String destination;
 
-        private Builder() {}
+        public Builder() {}
 
         public Builder id(Long value){
             id = value;
@@ -101,9 +74,8 @@ public class Customer {
             return this;
         }
 
-        public Customer build() {
-            return new Customer(this);
+        public HistoryDto build() {
+            return new HistoryDto(this);
         }
     }
-
 }
