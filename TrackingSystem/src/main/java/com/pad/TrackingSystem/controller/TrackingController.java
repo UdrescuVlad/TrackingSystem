@@ -5,6 +5,7 @@ import com.pad.TrackingSystem.model.Customer;
 import com.pad.TrackingSystem.repositories.CustomerRepository;
 import com.pad.TrackingSystem.service.HistoryInternalService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class TrackingController {
 
     @GetMapping("/customer/name/{name}")
     @ResponseStatus(HttpStatus.OK)
-    public HistoryDto getHistoryOrdersOfCustomer(@PathVariable("name") String name) {
-        return historyInternalService.getHistoryOrdersByName(name);
+    public List<HistoryDto> getHistoryOrdersOfCustomer(@PathVariable("name") String name) {
+        return historyInternalService.getDestinationsHistoryByName(name);
     }
 }

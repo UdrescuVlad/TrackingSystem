@@ -1,0 +1,34 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="history.component.css">
+  <h1>Identity</h1>
+</head>
+<body>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Car Type</th>
+    <th>Destination</th>
+  </tr>
+  <tr *ngFor="let history of customerHistory">
+    <td>
+      {{history.id}}
+    </td>
+    <td>
+      {{history.name}}
+    </td>
+    <td>
+      {{history.phone}}
+    </td>
+    <td>
+      {{history.typeCar}}
+    </td>
+    <td>
+      {{history.destination}}
+    </td>
+  </tr>
+</table>
+</body>
+</html>

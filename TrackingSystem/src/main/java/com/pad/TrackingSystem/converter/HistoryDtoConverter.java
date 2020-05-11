@@ -4,7 +4,7 @@ import com.pad.TrackingSystem.dto.HistoryDto;
 import com.pad.TrackingSystem.model.Customer;
 
 public class HistoryDtoConverter {
-    public HistoryDto convert(Customer customer) {
+    public static HistoryDto convert(Customer customer) {
         return new HistoryDto.Builder()
                 .id(customer.getId())
                 .name(customer.getName())

@@ -1,0 +1,14 @@
+body {
+  background-blend-mode: overlay;
+  background-color: darkgoldenrod;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td, h1{
+  padding: 5px;
+  text-align: center;
+}
