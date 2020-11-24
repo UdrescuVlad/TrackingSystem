@@ -5,7 +5,6 @@ import com.pad.TrackingSystem.model.Customer;
 import com.pad.TrackingSystem.repositories.CustomerRepository;
 import com.pad.TrackingSystem.service.HistoryInternalService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +14,19 @@ import java.util.List;
 @RequestMapping("/api")
 public class TrackingController {
 
-    @Autowired
     private CustomerRepository customerRepository;
 
+    private final HistoryInternalService historyInternalService;
+
+    public TrackingController(HistoryInternalService historyInternalService) {
+        this.historyInternalService = historyInternalService;
+    }
+
     @Autowired
-    private HistoryInternalService historyInternalService;
+    public TrackingController(CustomerRepository customerRepository, HistoryInternalService historyInternalService) {
+        this.customerRepository = customerRepository;
+        this.historyInternalService = historyInternalService;
+    }
 
     @GetMapping("/customers")
     @ResponseStatus(HttpStatus.OK)

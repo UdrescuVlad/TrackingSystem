@@ -1,7 +1,5 @@
 package com.pad.TrackingSystem.dto;
 
-import com.pad.TrackingSystem.model.Customer;
-
 public class HistoryDto {
     private HistoryDto() {}
 
