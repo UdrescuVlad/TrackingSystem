@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CustomersService} from '../../services/customers.service';
+import {SpecificCustomerService} from '../../services/specific-customer/specific.customer.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -10,13 +10,13 @@ import {ActivatedRoute} from '@angular/router';
 export class SpecificCustomerComponent implements OnInit {
 
   public customerReg;
-  constructor(private customersService: CustomersService, private route: ActivatedRoute) { }
+  constructor(private specificCustomer: SpecificCustomerService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getCustomer(this.route.snapshot.params.id);
   }
   getCustomer(id: number){
-    this.customersService.getSpecificCustomer(id).subscribe(
+    this.specificCustomer.getSpecificCustomer(id).subscribe(
       data => {
         this.customerReg = data;
       },

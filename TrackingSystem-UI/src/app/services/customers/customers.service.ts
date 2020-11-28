@@ -15,7 +15,4 @@ export class CustomersService {
   getCustomers() {
     return this.http.get('/server/api/customers');
   }
-  getSpecificCustomer(id: number) {
-    return this.http.get('/server/api/customer/' + id);
-  }
 }

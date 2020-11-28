@@ -4,16 +4,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomersService } from './services/customers.service';
-import { CutomersPageComponent } from './components/cutomers-page/cutomers-page.component';
+import { CustomersService } from './services/customers/customers.service';
+import { CustomersPageComponent } from './components/customers/customers-page.component';
 import { SpecificCustomerComponent } from './components/specific-customer/specific-customer.component';
-import {HistoryService} from './services/history/history.service';
+import { HistoryService } from './services/history/history.service';
 import { HistoryComponent } from './components/history/history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CutomersPageComponent,
+    CustomersPageComponent,
     SpecificCustomerComponent,
     HistoryComponent
   ],

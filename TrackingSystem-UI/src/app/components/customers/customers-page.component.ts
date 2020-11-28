@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomersService} from '../../services/customers.service';
+import { CustomersService} from '../../services/customers/customers.service';
 import {error} from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-cutomers-page',
-  templateUrl: './cutomers-page.component.html',
-  styleUrls: ['./cutomers-page.component.css']
+  templateUrl: './customers-page.component.html',
+  styleUrls: ['./customers-page.component.css']
 })
-export class CutomersPageComponent implements OnInit {
+export class CustomersPageComponent implements OnInit {
 
   public customers;
 
