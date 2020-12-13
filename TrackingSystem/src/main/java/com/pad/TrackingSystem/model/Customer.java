@@ -15,13 +15,13 @@ public class Customer {
 
     private String name;
     private String phone;
-    private String typeCar;
+    private String type_car;
     private String destination;
 
     public Customer(Builder builder) {
         setName(builder.name);
         setPhone(builder.phone);
-        setTypeCar(builder.typeCar);
+        setType_car(builder.typeCar);
         setDestination(builder.destination);
         setId(builder.id);
     }
@@ -50,12 +50,12 @@ public class Customer {
         this.phone = phone;
     }
 
-    public String getTypeCar() {
-        return typeCar;
+    public String getType_car() {
+        return type_car;
     }
 
-    public void setTypeCar(String typeCar) {
-        this.typeCar = typeCar;
+    public void setType_car(String typeCar) {
+        this.type_car = typeCar;
     }
 
     public String getDestination() {

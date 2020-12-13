@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomersService} from '../../services/customers/customers.service';
-import {error} from '@angular/compiler/src/util';
 
 @Component({
-  selector: 'app-cutomers-page',
+  selector: 'app-customers-page',
   templateUrl: './customers-page.component.html',
   styleUrls: ['./customers-page.component.css']
 })

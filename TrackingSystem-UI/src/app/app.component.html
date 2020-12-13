@@ -1,5 +1,13 @@
 <div style="text-align: center">
     <h1>Tracking System Platform</h1>
 </div>
-
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav" routerLinkActive="active">
+      <li class="nav-item"><a class="nav-link" routerLink="customers">Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="customer/2">Customer by ID</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="customer/name/test2Name">Customer by Name</a></li>
+    </ul>
+  </div>
+</nav>
 <router-outlet> </router-outlet>

@@ -9,7 +9,7 @@ public class HistoryDtoConverter {
                 .id(customer.getId())
                 .name(customer.getName())
                 .phone(customer.getPhone())
-                .typeCar(customer.getTypeCar())
+                .typeCar(customer.getType_car())
                 .destination(customer.getDestination())
                 .build();
     }
