@@ -1,13 +1,42 @@
-<div style="text-align: center">
+<head>
+  <div style="text-align: center">
     <h1>Tracking System Platform</h1>
-</div>
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav" routerLinkActive="active">
-      <li class="nav-item"><a class="nav-link" routerLink="customers">Dashboard</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="customer/2">Customer by ID</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="customer/name/test2Name">Customer by Name</a></li>
-    </ul>
   </div>
-</nav>
-<router-outlet> </router-outlet>
+</head>
+<div style="text-align: center">
+  <h1>Tracking System Platform</h1>
+</div>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div class="container">
+      <ul class="nav navbar-nav" routerLinkActive="active">
+        <li class="nav-item"><a class="nav-link" routerLink="customers">Dashboard</a></li>
+        <div class="search-customer">
+          <button class="dropbtn" onclick="ShowElement()">Search Customer
+            <li class="fa fa-caret-down"></li>
+          </button>
+          <div class="dropdown-content" id="search-type">
+            <li class="nav-item"><a class="nav-link" routerLink="customer/2">Customer by ID</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="customer/name/test2Name">Customer by Name</a></li>
+          </div>
+        </div>
+
+      </ul>
+    </div>
+  </nav>
+</body>
+<script>
+  function ShowElement() {
+    document.getElementById("search-type").classList.toggle("show");
+  }
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("search-type");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+</script>
+
+<router-outlet></router-outlet>

@@ -9,13 +9,15 @@ import { CustomersPageComponent } from './components/customers/customers-page.co
 import { SpecificCustomerComponent } from './components/specific-customer/specific-customer.component';
 import { HistoryService } from './services/history/history.service';
 import { HistoryComponent } from './components/history/history.component';
+import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomersPageComponent,
     SpecificCustomerComponent,
-    HistoryComponent
+    HistoryComponent,
+    SearchByNameComponent
   ],
   imports: [
     BrowserModule,

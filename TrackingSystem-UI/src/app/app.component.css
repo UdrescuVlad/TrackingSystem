@@ -17,6 +17,11 @@ li {
   float: left;
 }
 
+.search-customer {
+  float: left;
+  overflow: hidden;
+}
+
 li a {
   display: block;
   color: #111;
@@ -25,7 +30,18 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.search-customer .dropbtn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #111;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0
+}
+
+li a:hover:not(.active), .search-customer .dropbtn:hover {
   background-color: white;
 }
 
