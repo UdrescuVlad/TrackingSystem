@@ -1,1 +1,12 @@
-<p>search-by-name works!</p>
+<html>
+  <body>
+    <br>
+    <form [formGroup]="checkoutFormName" (ngSubmit)="onSubmit(checkoutFormName.value)">
+      <div class="form-group">
+        <label for="get_name">Search customer by his name </label>
+        <input id="get_name" type="text" formControlName="name">
+      </div>
+      <button class="ui-button-submit" type="submit">Search</button>
+    </form>
+  </body>
+</html>

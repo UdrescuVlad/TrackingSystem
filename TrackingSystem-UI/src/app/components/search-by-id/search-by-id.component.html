@@ -1,16 +1,13 @@
 <html>
-  <head>
-    THIS IS SEARCH BY ID
-  </head>
   <body>
-  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-    <div class="form-group">
-      <label for="get_id">ID </label>
-      <input id="get_id" type="text" formControlName="id">
-    </div>
     <br>
-    <button class="ui-button-submit" type="submit">Search</button>
-  </form>
+    <form [formGroup]="checkoutFormId" (ngSubmit)="onSubmit(checkoutFormId.value)">
+      <div class="form-group">
+        <label for="get_id">Search customer by his id </label>
+        <input id="get_id" type="text" formControlName="id">
+      </div>
+      <button class="ui-button-submit" type="submit">Search</button>
+    </form>
   </body>
 </html>
 
