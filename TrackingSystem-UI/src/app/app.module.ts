@@ -10,6 +10,8 @@ import { SpecificCustomerComponent } from './components/specific-customer/specif
 import { HistoryService } from './services/history/history.service';
 import { HistoryComponent } from './components/history/history.component';
 import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
+import { SearchByIdComponent } from './components/search-by-id/search-by-id.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { SearchByNameComponent } from './components/search-by-name/search-by-nam
     CustomersPageComponent,
     SpecificCustomerComponent,
     HistoryComponent,
-    SearchByNameComponent
+    SearchByNameComponent,
+    SearchByIdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CustomersService, HistoryService],
   bootstrap: [AppComponent]

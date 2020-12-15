@@ -27,6 +27,11 @@ public class TrackingController {
         this.customerRepository = customerRepository;
         this.historyInternalService = historyInternalService;
     }
+    @GetMapping("/")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Customer> list1() {
+        return customerRepository.findAll();
+    }
 
     @GetMapping("/customers")
     @ResponseStatus(HttpStatus.OK)

@@ -46,5 +46,5 @@ li a:hover:not(.active), .search-customer .dropbtn:hover {
 }
 
 .active {
-  background-color: darkgoldenrod;
+  background-color: grey;
 }

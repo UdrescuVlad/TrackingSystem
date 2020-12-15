@@ -12,12 +12,10 @@
       <ul class="nav navbar-nav" routerLinkActive="active">
         <li class="nav-item"><a class="nav-link" routerLink="customers">Dashboard</a></li>
         <div class="search-customer">
-          <button class="dropbtn" onclick="ShowElement()">Search Customer
-            <li class="fa fa-caret-down"></li>
-          </button>
+          <button class="dropbtn" onclick="ShowElement()">Search Customer</button>
           <div class="dropdown-content" id="search-type">
-            <li class="nav-item"><a class="nav-link" routerLink="customer/2">Customer by ID</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="customer/name/test2Name">Customer by Name</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="customer/search-by-id">Customer by ID</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="customer/search-by-name">Customer by Name</a></li>
           </div>
         </div>
 
@@ -38,5 +36,4 @@
     }
   }
 </script>
-
 <router-outlet></router-outlet>
