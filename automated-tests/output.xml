@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.2 on win32)" generated="20201216 16:16:05.256" rpa="false">
+<suite id="s1" name="Check Customer By Name" source="C:\Work\PAD2\TrackingSystem\automated-tests\Check Customer By Name.robot">
+<test id="s1-t1" name="Check Name text">
+<kw name="Go to Angular-Server" library="functions">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${page}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201216 16:16:05.425" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4200/'.</msg>
+<status status="PASS" starttime="20201216 16:16:05.425" endtime="20201216 16:16:09.180"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201216 16:16:09.180" endtime="20201216 16:16:11.297"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:05.425" endtime="20201216 16:16:11.297"></status>
+</kw>
+<kw name="Check If Text Name Is Present And Verify It" library="functions">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check if text name is present and verify it</arg>
+</arguments>
+<msg timestamp="20201216 16:16:11.298" level="INFO">Check if text name is present and verify it</msg>
+<status status="PASS" starttime="20201216 16:16:11.298" endtime="20201216 16:16:11.299"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="search-type"]/li[2]/a</arg>
+</arguments>
+<msg timestamp="20201216 16:16:11.299" level="INFO">Clicking element '//*[@id="search-type"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20201216 16:16:11.299" endtime="20201216 16:16:11.376"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.378" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201216 16:16:11.376" endtime="20201216 16:16:12.378"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//body//html//form/div/label</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.398" level="INFO">Element '//body//html//form/div/label' is displayed.</msg>
+<status status="PASS" starttime="20201216 16:16:12.378" endtime="20201216 16:16:12.398"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//body//html//form/div/label</arg>
+</arguments>
+<assign>
+<var>${Name_text}</var>
+</assign>
+<msg timestamp="20201216 16:16:12.414" level="INFO">${Name_text} = Search customer by his name</msg>
+<status status="PASS" starttime="20201216 16:16:12.398" endtime="20201216 16:16:12.414"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should be Equal</arg>
+<arg>${Name_text}</arg>
+<arg>Search customer by his name</arg>
+</arguments>
+<assign>
+<var>${Assert_Name_text}</var>
+</assign>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Name_text}</arg>
+<arg>Search customer by his name</arg>
+</arguments>
+<status status="PASS" starttime="20201216 16:16:12.414" endtime="20201216 16:16:12.414"></status>
+</kw>
+<msg timestamp="20201216 16:16:12.414" level="INFO">${Assert_Name_text} = True</msg>
+<status status="PASS" starttime="20201216 16:16:12.414" endtime="20201216 16:16:12.414"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Assert_Name_text}' == 'True'</arg>
+<arg>Log</arg>
+<arg>ok</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>something went wrong</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>ok</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.414" level="INFO">ok</msg>
+<status status="PASS" starttime="20201216 16:16:12.414" endtime="20201216 16:16:12.414"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:12.414" endtime="20201216 16:16:12.414"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:11.298" endtime="20201216 16:16:12.414"></status>
+</kw>
+<kw name="Check Input Name Value" library="functions">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check that user can type an name in input field</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.416" level="INFO">Check that user can type an name in input field</msg>
+<status status="PASS" starttime="20201216 16:16:12.416" endtime="20201216 16:16:12.416"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id:get_name</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.438" level="INFO">Element 'id:get_name' is displayed.</msg>
+<status status="PASS" starttime="20201216 16:16:12.416" endtime="20201216 16:16:12.438"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:get_name</arg>
+</arguments>
+<status status="PASS" starttime="20201216 16:16:12.438" endtime="20201216 16:16:12.459"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:get_name</arg>
+<arg>test2Name</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.459" level="INFO">Typing text 'test2Name' into text field 'id:get_name'.</msg>
+<status status="PASS" starttime="20201216 16:16:12.459" endtime="20201216 16:16:12.528"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:12.416" endtime="20201216 16:16:12.528"></status>
+</kw>
+<kw name="Check Search Buttton Works" library="functions">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check that button is displayed, have the proper text and can be clickable</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.529" level="INFO">Check that button is displayed, have the proper text and can be clickable</msg>
+<status status="PASS" starttime="20201216 16:16:12.529" endtime="20201216 16:16:12.529"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//body//html//form/button</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.547" level="INFO">Element '//body//html//form/button' is displayed.</msg>
+<status status="PASS" starttime="20201216 16:16:12.529" endtime="20201216 16:16:12.547"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//body//html//form/button</arg>
+</arguments>
+<assign>
+<var>${searchButton_text}</var>
+</assign>
+<msg timestamp="20201216 16:16:12.565" level="INFO">${searchButton_text} = Search</msg>
+<status status="PASS" starttime="20201216 16:16:12.547" endtime="20201216 16:16:12.565"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should be Equal</arg>
+<arg>${searchButton_text}</arg>
+<arg>Search</arg>
+</arguments>
+<assign>
+<var>${Assert_searchButton_text}</var>
+</assign>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${searchButton_text}</arg>
+<arg>Search</arg>
+</arguments>
+<status status="PASS" starttime="20201216 16:16:12.565" endtime="20201216 16:16:12.566"></status>
+</kw>
+<msg timestamp="20201216 16:16:12.566" level="INFO">${Assert_searchButton_text} = True</msg>
+<status status="PASS" starttime="20201216 16:16:12.565" endtime="20201216 16:16:12.566"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Assert_searchButton_text}' == 'True'</arg>
+<arg>Log</arg>
+<arg>ok</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>something went wrong</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>ok</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.566" level="INFO">ok</msg>
+<status status="PASS" starttime="20201216 16:16:12.566" endtime="20201216 16:16:12.566"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:12.566" endtime="20201216 16:16:12.566"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//body//html//form/button</arg>
+</arguments>
+<msg timestamp="20201216 16:16:12.566" level="INFO">Clicking button '//body//html//form/button'.</msg>
+<status status="PASS" starttime="20201216 16:16:12.566" endtime="20201216 16:16:12.627"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:12.528" endtime="20201216 16:16:12.627"></status>
+</kw>
+<kw name="Check Current Link For Name Searched" library="functions">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201216 16:16:14.628" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201216 16:16:12.628" endtime="20201216 16:16:14.628"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return window.location.href;</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20201216 16:16:14.630" level="INFO">Executing JavaScript:
+return window.location.href;
+Without any arguments.</msg>
+<msg timestamp="20201216 16:16:14.643" level="INFO">${url} = http://localhost:4200/customer/name/test2Name</msg>
+<status status="PASS" starttime="20201216 16:16:14.629" endtime="20201216 16:16:14.644"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20201216 16:16:14.645" level="INFO">http://localhost:4200/customer/name/test2Name</msg>
+<status status="PASS" starttime="20201216 16:16:14.644" endtime="20201216 16:16:14.645"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should be Equal</arg>
+<arg>${url}</arg>
+<arg>http://localhost:4200/customer/name/test2Name</arg>
+</arguments>
+<assign>
+<var>${Assert_url}</var>
+</assign>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>http://localhost:4200/customer/name/test2Name</arg>
+</arguments>
+<status status="PASS" starttime="20201216 16:16:14.646" endtime="20201216 16:16:14.647"></status>
+</kw>
+<msg timestamp="20201216 16:16:14.647" level="INFO">${Assert_url} = True</msg>
+<status status="PASS" starttime="20201216 16:16:14.645" endtime="20201216 16:16:14.647"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Assert_url}' == 'True'</arg>
+<arg>Log</arg>
+<arg>ok</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>something went wrong</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>ok</arg>
+</arguments>
+<msg timestamp="20201216 16:16:14.649" level="INFO">ok</msg>
+<status status="PASS" starttime="20201216 16:16:14.648" endtime="20201216 16:16:14.649"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:14.647" endtime="20201216 16:16:14.649"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:12.628" endtime="20201216 16:16:14.649"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201216 16:16:14.651" endtime="20201216 16:16:16.874"></status>
+</kw>
+<status status="PASS" starttime="20201216 16:16:05.424" endtime="20201216 16:16:16.876" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201216 16:16:05.258" endtime="20201216 16:16:16.889"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Check Customer By Name">Check Customer By Name</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
